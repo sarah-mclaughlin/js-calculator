@@ -16,12 +16,6 @@ h1 {
     border-radius: 5px;
 }
 
-.mainscreen {
-    width: 48%;
-    margin-left: 24%;
-    border-radius: 5px;
-}
-
 button {
     margin: 10px;
     padding-top: 10px;
@@ -45,12 +39,15 @@ button {
     border-radius: 10px;
 }
 
-.result {
+#result {
     margin-left: 24%;
-    margin-right: 24%;
+    margin-right: 27.5%;
     border-radius: 5px;
-    background-color: grey;
-    height: 20px;
+    background-color: rgb(190, 190, 190);
+    height: 30px;
+}
+#mainscreen {
+    padding-bottom: 20px;
 }
 
 
