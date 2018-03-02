@@ -128,7 +128,12 @@ function calculateTotal() {
     document.getElementById('result').innerHTML = total;
 }
 var equation;
-    
+
+//To do:
+//to the power of
+//BACK
+//.replace * and / and ^ in string
+//css
 
 
 
