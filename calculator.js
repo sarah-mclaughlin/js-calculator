@@ -1,14 +1,3 @@
-//capture input
-// var getNum = document.getElementsByClassName('num');
-
-// function display(numEle) {
-//     console.log(numEle.innerHTML)
-//     document.getElementById('result').innerHTML += numEle.innerHTML;
-// }
-// Array.from(getNum).forEach(function(val){
-// val.addEventListener("click", display.bind(this, val))
-// })
-
 var getZero = document.getElementById('button0');
 getZero.addEventListener("click", display0);
 function display0() {
@@ -106,34 +95,22 @@ function displayClear() {
 }
 
 var equals = document.getElementById('equals');
-equals.addEventListener("click", displayEquals);
-function displayEquals() {
-    //document.getElementById('result').innerHTML += equals.innerHTML;
-}
-
-// var back = document.getElementById('BACK');
-// back.addEventListener("click", displayBack);
-// function displayBack() {
-//     document.getElementById('result').innerHTML += back.innerHTML;
-// }
-
-
-var equals = document.getElementById('equals');
 equals.addEventListener("click", calculateTotal);
 function calculateTotal() {
     var total = 0;
-    equation = document.getElementById('result').innerHTML;
+    var equation = document.getElementById('result').innerHTML;
     console.log(equation);
-    total = Function(equation);
+    total = eval(equation);
+    console.log(equation);
     document.getElementById('result').innerHTML = total;
-}
-var equation;
-
+};
+    
 //To do:
 //to the power of
 //BACK
 //.replace * and / and ^ in string
 //css
+
 
 
 
