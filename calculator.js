@@ -99,8 +99,6 @@ equals.addEventListener("click", calculateTotal);
 function calculateTotal() {
     var total = 0;
     var equation = document.getElementById('result').innerHTML;
-    console.log(equation);
     total = eval(equation);
-    console.log(equation);
     document.getElementById('result').innerHTML = total;
 };
