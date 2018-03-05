@@ -94,6 +94,18 @@ function displayClear() {
     document.getElementById('result').innerHTML = '';
 }
 
+var back = document.getElementById('BACK');
+back.addEventListener("click", goBack);
+function goBack() {
+    document.getElementById('result').innerHTML = document.getElementById('result').innerHTML.slice(0, -1);
+}
+
+// var power = document.getElementById('power');
+// power.addEventListener("click", displayPower);
+// function displayPower() {
+//     document.getElementById('result').innerHTML += power.innerHTML;
+// }
+
 var equals = document.getElementById('equals');
 equals.addEventListener("click", calculateTotal);
 function calculateTotal() {
@@ -105,9 +117,7 @@ function calculateTotal() {
     document.getElementById('result').innerHTML = total;
 };
     
-//To do:
 //to the power of
-//BACK
 //.replace * and / and ^ in string
 //css
 
