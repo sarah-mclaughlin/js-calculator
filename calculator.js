@@ -106,18 +106,44 @@ function goBack() {
     document.getElementById('result').innerHTML = document.getElementById('result').innerHTML.slice(0, -1);
 }
 
-var expression = '';
-expression = document.getElementById('result').innerHTML;
-console.log(expression);
+var equals = document.getElementById('equals');
+equals.addEventListener("click", calculateTotal);
+function calculateTotal() {
+    // convert results string to an array
+    var expression = [];
+    expression = document.getElementById('result').innerHTML;
+    // split array at '' and join the numbers
+    expression.split('').join(NaN);
+    // define number left of operator and number right of operator
+    // ??
+    // calculate total
+    var total = 0;
+    if (operator === x) {
+        total = numLeft * numRight;
+    };
+    if (operator === ÷) {
+        total = numLeft / numRight;
+    };
+    if (operator === +) {
+        total = numLeft + numRight;
+    };
+    if (operator === -) {
+        total = numLeft - numRight;
+    };
+    if (operator === +) {
+        total = numLeft + numRight;
+    };
+    if (operator === +) {
+        total = numLeft + numRight;
+    };
+    if (operator === ^) {
+    // perform exponent calculation
+        for (var i = 0; i < numRight; i++); 
+        total = numLeft * numLeft;
+    }
 
-// set operators +, -, x (*), ÷ (/), ^
-// split string/array at operators
-// if 'operator' === ^ then run for loop for exponential equation 
-// if operator === x then * numbers either side
-// if operator === ÷ then / numbers either side 
-// etc for + and -
-// var equals = document.getElementById('equals');
-// equals.addEventListener("click", calculateTotal);
+
+}
 // function calculateTotal() {
 //     var total = 0;
 //     var expression = document.getElementById('result').innerHTML;
@@ -126,7 +152,7 @@ console.log(expression);
 
 //   total = eval(equation);
 
-//     document.getElementById('result').innerHTML = total;
+document.getElementById('result').innerHTML = total;
 // };
 
 
