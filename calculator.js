@@ -144,6 +144,8 @@ function calculateTotal() {
         total = numLeft * numLeft;
     }
 
+    // display results on calculator's screen
+    document.getElementById('result').innerHTML = total;
 }
 
 /* function calculateTotal() {
