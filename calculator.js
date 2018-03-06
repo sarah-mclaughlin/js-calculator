@@ -112,8 +112,11 @@ function calculateTotal() {
     // convert results string to an array
     var expression = [];
     expression = document.getElementById('result').innerHTML;
-    // split array at '' and join the numbers
-    expression.split('').join(NaN);
+    
+    // split expression into an array        
+    var expressionArray = expression.split(''); // '' sets the separation point at each character.
+    
+    // use .join() feature
     // define number left of operator and number right of operator
     // ??
     // calculate total
