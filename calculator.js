@@ -110,8 +110,7 @@ var equals = document.getElementById('equals');
 equals.addEventListener("click", calculateTotal);
 function calculateTotal() {
     // convert results string to an array
-    var expression = [];
-    expression = document.getElementById('result').innerHTML;
+    var expression = document.getElementById('result').innerHTML;
     
     // split expression into an array        
     var expressionArray = expression.split(''); // '' sets the separation point at each character.
@@ -145,26 +144,13 @@ function calculateTotal() {
         total = numLeft * numLeft;
     }
 
-
 }
-// function calculateTotal() {
-//     var total = 0;
-//     var expression = document.getElementById('result').innerHTML;
-//     console.log(expression);
-//     expression = expression.split('x', '+', '-', );
 
-//   total = eval(equation);
-
-document.getElementById('result').innerHTML = total;
-// };
-
-
-
-
-
-
-
-
-
-
-
+/* function calculateTotal() {
+    var total = 0;
+    var expression = document.getElementById('result').innerHTML;
+    console.log(expression);
+    expression = expression.split('x', '+', '-', );
+    total = eval(equation);
+    document.getElementById('result').innerHTML = total;
+} */
