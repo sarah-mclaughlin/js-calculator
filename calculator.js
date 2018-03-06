@@ -61,13 +61,13 @@ function display9() {
 var getDivide = document.getElementById('divide');
 getDivide.addEventListener("click", displayDivide);
 function displayDivide() {
-    document.getElementById('result').innerHTML += '/';
+    document.getElementById('result').innerHTML += getDivide.innerHTML;
 }
 
 var getTimes = document.getElementById('times');
 getTimes.addEventListener("click", displayTimes);
 function displayTimes() {
-    document.getElementById('result').innerHTML += '*';
+    document.getElementById('result').innerHTML += getTimes.innerHTML;
 }
 
 var getPlus = document.getElementById('plus');
@@ -88,6 +88,12 @@ function displayPoint() {
     document.getElementById('result').innerHTML += getPoint.innerHTML;
 }
 
+var getPower = document.getElementById('power');
+getPower.addEventListener("click", displayPower);
+function displayPower() {
+    document.getElementById('result').innerHTML += getPower.innerHTML;
+}
+
 var clearResults = document.getElementById('clear');
 clearResults.addEventListener("click", displayClear);
 function displayClear() {
@@ -100,26 +106,29 @@ function goBack() {
     document.getElementById('result').innerHTML = document.getElementById('result').innerHTML.slice(0, -1);
 }
 
-// var power = document.getElementById('power');
-// power.addEventListener("click", displayPower);
-// function displayPower() {
-//     document.getElementById('result').innerHTML += power.innerHTML;
-// }
+var expression = '';
+expression = document.getElementById('result').innerHTML;
+console.log(expression);
 
-var equals = document.getElementById('equals');
-equals.addEventListener("click", calculateTotal);
-function calculateTotal() {
-    var total = 0;
-    var equation = document.getElementById('result').innerHTML;
-    console.log(equation);
-    total = eval(equation);
-    console.log(equation);
-    document.getElementById('result').innerHTML = total;
-};
-    
-//to the power of
-//.replace * and / and ^ in string
-//css
+// set operators +, -, x (*), ÷ (/), ^
+// split string/array at operators
+// if 'operator' === ^ then run for loop for exponential equation 
+// if operator === x then * numbers either side
+// if operator === ÷ then / numbers either side 
+// etc for + and -
+// var equals = document.getElementById('equals');
+// equals.addEventListener("click", calculateTotal);
+// function calculateTotal() {
+//     var total = 0;
+//     var expression = document.getElementById('result').innerHTML;
+//     console.log(expression);
+//     expression = expression.split('x', '+', '-', );
+
+//   total = eval(equation);
+
+//     document.getElementById('result').innerHTML = total;
+// };
+
 
 
 
