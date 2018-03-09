@@ -94,6 +94,12 @@ function displayClear() {
     document.getElementById('result').innerHTML = '';
 }
 
+var back = document.getElementById('BACK');
+back.addEventListener("click", goBack);
+function goBack() {
+    document.getElementById('result').innerHTML = document.getElementById('result').innerHTML.slice(0, -1);
+}
+
 var equals = document.getElementById('equals');
 equals.addEventListener("click", calculateTotal);
 function calculateTotal() {
