@@ -1,126 +1,126 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     var numButtons = document.getElementsByClassName("num")
-//     for (var i = 0; i < numButtons.length; i++) {
-//         numButtons[i].addEventListener('click', display)
-//     }
-// })
-// function display(val) {
-// var entry = val.target.innerHTML;
-// document.getElementById("display").innerHTML += entry;
+document.addEventListener('DOMContentLoaded', function() {
+    var numButtons = document.getElementsByClassName("num")
+    for (var i = 0; i < numButtons.length; i++) {
+        numButtons[i].addEventListener('click', display)
+    }
+})
+function display(val) {
+var entry = val.target.innerHTML;
+document.getElementById("display").innerHTML += entry;
+}
+
+
+var buttons = [
+    document.getElementById('button0'),
+    document.getElementById('button1'),
+    document.getElementById('button2'),
+    etc
+];
+
+buttons.addEventListener("click", display);
+function display() {
+for (var i = 0; i < buttons.length; i++) {
+    document.getElementById('result').innerHTML += buttons[i].innerHTML;
+}
+
+// var getZero = document.getElementById('button0');
+// getZero.addEventListener("click", display0);
+// function display0() {
+//     document.getElementById('result').innerHTML += getZero.innerHTML;
 // }
 
-
-// var buttons = [
-//     document.getElementById('button0'),
-//     document.getElementById('button1'),
-//     document.getElementById('button2'),
-//     etc
-// ];
-
-// buttons.addEventListener("click", display);
-// function display() {
-// for (var i = 0; i < buttons.length; i++) {
-//     document.getElementById('result').innerHTML += buttons[i].innerHTML;
+// var getOne = document.getElementById('button1');
+// getOne.addEventListener("click", display1);
+// function display1() {
+//     document.getElementById('result').innerHTML += getOne.innerHTML;
 // }
 
-var getZero = document.getElementById('button0');
-getZero.addEventListener("click", display0);
-function display0() {
-    document.getElementById('result').innerHTML += getZero.innerHTML;
-}
+// var getTwo = document.getElementById('button2');
+// getTwo.addEventListener("click", display2);
+// function display2() {
+//     document.getElementById('result').innerHTML += getTwo.innerHTML;
+// }
 
-var getOne = document.getElementById('button1');
-getOne.addEventListener("click", display1);
-function display1() {
-    document.getElementById('result').innerHTML += getOne.innerHTML;
-}
+// var getThree = document.getElementById('button3');
+// getThree.addEventListener("click", display3);
+// function display3() {
+//     document.getElementById('result').innerHTML += getThree.innerHTML;
+// }
 
-var getTwo = document.getElementById('button2');
-getTwo.addEventListener("click", display2);
-function display2() {
-    document.getElementById('result').innerHTML += getTwo.innerHTML;
-}
+// var getFour = document.getElementById('button4');
+// getFour.addEventListener("click", display4);
+// function display4() {
+//     document.getElementById('result').innerHTML += getFour.innerHTML;
+// }
 
-var getThree = document.getElementById('button3');
-getThree.addEventListener("click", display3);
-function display3() {
-    document.getElementById('result').innerHTML += getThree.innerHTML;
-}
+// var getFive = document.getElementById('button5');
+// getFive.addEventListener("click", display5);
+// function display5() {
+//     document.getElementById('result').innerHTML += getFive.innerHTML;
+// }
 
-var getFour = document.getElementById('button4');
-getFour.addEventListener("click", display4);
-function display4() {
-    document.getElementById('result').innerHTML += getFour.innerHTML;
-}
+// var getSix = document.getElementById('button6');
+// getSix.addEventListener("click", display6);
+// function display6() {
+//     document.getElementById('result').innerHTML += getSix.innerHTML;
+// }
 
-var getFive = document.getElementById('button5');
-getFive.addEventListener("click", display5);
-function display5() {
-    document.getElementById('result').innerHTML += getFive.innerHTML;
-}
+// var getSeven = document.getElementById('button7');
+// getSeven.addEventListener("click", display7);
+// function display7() {
+//     document.getElementById('result').innerHTML += getSeven.innerHTML;
+// }
 
-var getSix = document.getElementById('button6');
-getSix.addEventListener("click", display6);
-function display6() {
-    document.getElementById('result').innerHTML += getSix.innerHTML;
-}
+// var getEight = document.getElementById('button8');
+// getEight.addEventListener("click", display8);
+// function display8() {
+//     document.getElementById('result').innerHTML += getEight.innerHTML;
+// }
 
-var getSeven = document.getElementById('button7');
-getSeven.addEventListener("click", display7);
-function display7() {
-    document.getElementById('result').innerHTML += getSeven.innerHTML;
-}
+// var getNine = document.getElementById('button9');
+// getNine.addEventListener("click", display9);
+// function display9() {
+//     document.getElementById('result').innerHTML += getNine.innerHTML;
+// }
 
-var getEight = document.getElementById('button8');
-getEight.addEventListener("click", display8);
-function display8() {
-    document.getElementById('result').innerHTML += getEight.innerHTML;
-}
+// var getDivide = document.getElementById('divide');
+// getDivide.addEventListener("click", displayDivide);
+// function displayDivide() {
+//     document.getElementById('result').innerHTML += getDivide.innerHTML;
+// }
 
-var getNine = document.getElementById('button9');
-getNine.addEventListener("click", display9);
-function display9() {
-    document.getElementById('result').innerHTML += getNine.innerHTML;
-}
+// var getTimes = document.getElementById('times');
+// getTimes.addEventListener("click", displayTimes);
+// function displayTimes() {
+//     document.getElementById('result').innerHTML += getTimes.innerHTML;
+// }
 
-var getDivide = document.getElementById('divide');
-getDivide.addEventListener("click", displayDivide);
-function displayDivide() {
-    document.getElementById('result').innerHTML += getDivide.innerHTML;
-}
+// var getPlus = document.getElementById('plus');
+// getPlus.addEventListener("click", displayPlus);
+// function displayPlus() {
+//     document.getElementById('result').innerHTML += getPlus.innerHTML;
+// }
 
-var getTimes = document.getElementById('times');
-getTimes.addEventListener("click", displayTimes);
-function displayTimes() {
-    document.getElementById('result').innerHTML += getTimes.innerHTML;
-}
+// var getMinus = document.getElementById('minus');
+// getMinus.addEventListener("click", displayMinus);
+// function displayMinus() {
+//     document.getElementById('result').innerHTML += getMinus.innerHTML;
+// }
 
-var getPlus = document.getElementById('plus');
-getPlus.addEventListener("click", displayPlus);
-function displayPlus() {
-    document.getElementById('result').innerHTML += getPlus.innerHTML;
-}
+// var getPoint = document.getElementById('point');
+// getPoint.addEventListener("click", displayPoint);
+// function displayPoint() {
+//     document.getElementById('result').innerHTML += getPoint.innerHTML;
+// }
 
-var getMinus = document.getElementById('minus');
-getMinus.addEventListener("click", displayMinus);
-function displayMinus() {
-    document.getElementById('result').innerHTML += getMinus.innerHTML;
-}
+// var getPower = document.getElementById('power');
+// getPower.addEventListener("click", displayPower);
+// function displayPower() {
+//     document.getElementById('result').innerHTML += getPower.innerHTML;
+// }
 
-var getPoint = document.getElementById('point');
-getPoint.addEventListener("click", displayPoint);
-function displayPoint() {
-    document.getElementById('result').innerHTML += getPoint.innerHTML;
-}
-
-var getPower = document.getElementById('power');
-getPower.addEventListener("click", displayPower);
-function displayPower() {
-    document.getElementById('result').innerHTML += getPower.innerHTML;
-}
-
-var clearResults = document.getElementById('clear');
-clearResults.addEventListener("click", displayClear);
+var clear = document.getElementById('clear');
+clear.addEventListener("click", displayClear);
 function displayClear() {
     document.getElementById('result').innerHTML = '';
 }
@@ -174,7 +174,7 @@ function calculateTotal() {
     var total = 0;
     var expression = document.getElementById('result').innerHTML;
     console.log(expression);
-    expression = expression.split('x', '+', '-', );
+    expression = expression.split('x', '+', '-', ÷);
     total = eval(equation);
     document.getElementById('result').innerHTML = total;
 } */
@@ -184,43 +184,29 @@ function calculateTotal() {
 var entries = [];
 var total = 0;
 
-var temp = '';
-$("button").on('click', function() {
- 	var val = $(this).text();
+var hold = '';
+// $("button").on('click', function() {
+//  	var val = $(this).text();
 
-  // Got a number, add to temp
   if (!isNaN(val) || val === '.') {
-    temp += val;
-    $("#answer").val(temp.substring(0,10));
+    hold += val;
+    document.getElementById('result').innerHTML = hold;
+    // $("#answer").val(temp.substring(0,10));
     
-  // Got some symbol other than equals, add temp to our entries
   // then add our current symbol and clear temp  
-  } else if (val === 'AC') {
+  } else if (val === 'C') {
     entries = [];
-    temp = '';
+    hold = '';
     total = 0;
+    // $("#answer").val('')
+
+  } else if (val === 'BACK') {
+    hold = '';
+    // document.getElementById('result').innerHTML = document.getElementById('result').innerHTML.slice(0, -1);
     $("#answer").val('')
 
-  // Clear last entry
-  } else if (val === 'CE') {
-    temp = '';
-    $("#answer").val('')
-    
-  // Change multiply symbol to work with eval
-  } else if (val === 'x') {
-    entries.push(temp);
-    entries.push('*');
-    temp = '';
-    
-  // Change divide symbol to work with eval
-  } else if (val === '÷') {
-    entries.push(temp);
-    entries.push('/');
-    temp = '';
-
-  // Got the equals sign, perform calculation
   } else if (val === '=') {
-  	entries.push(temp);
+  	entries.push(hold);
 
     var nt = Number(entries[0]);
     for (var i = 1; i < entries.length; i++) {
@@ -229,8 +215,8 @@ $("button").on('click', function() {
       
       if (symbol === '+') { nt += nextNum; } 
       else if (symbol === '-') { nt -= nextNum; } 
-      else if (symbol === '*') { nt *= nextNum; } 
-      else if (symbol === '/') { nt /= nextNum; }
+      else if (symbol === 'x') { nt *= nextNum; } 
+      else if (symbol === '÷') { nt /= nextNum; }
       
       i++;
     }
@@ -246,8 +232,8 @@ $("button").on('click', function() {
     
   // Push number
   } else {
-    entries.push(temp);
+    entries.push(hold);
     entries.push(val);
-    temp = '';
+    hold = '';
   }
 });
