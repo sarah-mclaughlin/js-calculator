@@ -1,3 +1,28 @@
+// document.addEventListener('DOMContentLoaded', function() {
+//     var numButtons = document.getElementsByClassName("num")
+//     for (var i = 0; i < numButtons.length; i++) {
+//         numButtons[i].addEventListener('click', display)
+//     }
+// })
+// function display(val) {
+// var entry = val.target.innerHTML;
+// document.getElementById("display").innerHTML += entry;
+// }
+
+
+// var buttons = [
+//     document.getElementById('button0'),
+//     document.getElementById('button1'),
+//     document.getElementById('button2'),
+//     etc
+// ];
+
+// buttons.addEventListener("click", display);
+// function display() {
+// for (var i = 0; i < buttons.length; i++) {
+//     document.getElementById('result').innerHTML += buttons[i].innerHTML;
+// }
+
 var getZero = document.getElementById('button0');
 getZero.addEventListener("click", display0);
 function display0() {
@@ -110,15 +135,15 @@ var equals = document.getElementById('equals');
 equals.addEventListener("click", calculateTotal);
 function calculateTotal() {
     // convert results string to an array
-    var expression = document.getElementById('result').innerHTML;
-    
+    var expression = [];
+    expression = document.getElementById('result').innerHTML;
     // split expression into an array        
-    var expressionArray = expression.split(''); // '' sets the separation point at each character.
+    var expressionArray = expression.split('').join(\d); // '' sets the separation point at each character.
     
-    // use .join() feature
-    // define number left of operator and number right of operator
-    // ??
-    // calculate total
+    var numLeft = expressionArray[0];
+    var operator = expressionArray[1];
+    var numRight = expressionArray[2];
+    
     var total = 0;
     if (operator === x) {
         total = numLeft * numRight;
@@ -131,9 +156,6 @@ function calculateTotal() {
     };
     if (operator === -) {
         total = numLeft - numRight;
-    };
-    if (operator === +) {
-        total = numLeft + numRight;
     };
     if (operator === +) {
         total = numLeft + numRight;
@@ -156,3 +178,76 @@ function calculateTotal() {
     total = eval(equation);
     document.getElementById('result').innerHTML = total;
 } */
+
+
+
+var entries = [];
+var total = 0;
+
+var temp = '';
+$("button").on('click', function() {
+ 	var val = $(this).text();
+
+  // Got a number, add to temp
+  if (!isNaN(val) || val === '.') {
+    temp += val;
+    $("#answer").val(temp.substring(0,10));
+    
+  // Got some symbol other than equals, add temp to our entries
+  // then add our current symbol and clear temp  
+  } else if (val === 'AC') {
+    entries = [];
+    temp = '';
+    total = 0;
+    $("#answer").val('')
+
+  // Clear last entry
+  } else if (val === 'CE') {
+    temp = '';
+    $("#answer").val('')
+    
+  // Change multiply symbol to work with eval
+  } else if (val === 'x') {
+    entries.push(temp);
+    entries.push('*');
+    temp = '';
+    
+  // Change divide symbol to work with eval
+  } else if (val === '÷') {
+    entries.push(temp);
+    entries.push('/');
+    temp = '';
+
+  // Got the equals sign, perform calculation
+  } else if (val === '=') {
+  	entries.push(temp);
+
+    var nt = Number(entries[0]);
+    for (var i = 1; i < entries.length; i++) {
+      var nextNum = Number(entries[i+1])
+      var symbol = entries[i];
+      
+      if (symbol === '+') { nt += nextNum; } 
+      else if (symbol === '-') { nt -= nextNum; } 
+      else if (symbol === '*') { nt *= nextNum; } 
+      else if (symbol === '/') { nt /= nextNum; }
+      
+      i++;
+    }
+    
+    // Swap the '-' symbol so text input handles it correctly
+    if (nt < 0) {
+      nt = Math.abs(nt) + '-';
+    }
+    
+    $("#answer").val(nt);
+		entries = [];
+    temp = '';
+    
+  // Push number
+  } else {
+    entries.push(temp);
+    entries.push(val);
+    temp = '';
+  }
+});
